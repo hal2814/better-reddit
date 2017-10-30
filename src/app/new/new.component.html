@@ -1,5 +1,17 @@
-<div class="form-control">
-  <form class="post" action="new.component.html" method="post">
 
-  </form>
+<div>
+  <select>
+    <div *ngFor="let user of USERS">
+      <option  value="user">test</option>
+    </div>
+  </select>
+  <label>Enter Username:</label>
+  <input #newUser>
+  <label>Enter Title:</label>
+  <input #newTitle>
+  <label>Enter Content:</label>
+  <input #newContent>
+  <label>Enter Id:</label>
+  <input #newID>
+  <button (click)="submitForm(newUser.value, newTitle.value, newContent.value, newID.value); newUser.value=''; newTitle.value=''; newContent.value=''; newID.value='';">Add</button>
 </div>
