@@ -1,6 +1,11 @@
-<h2>This post has id number: {{postId}}</h2>
 <div>
-  <h3>{{postToDisplay.user}}</h3>
-  <h4>{{postToDisplay.title}}</h4>
-  <p>{{postToDisplay.content}}</p>
+  <h2>{{postToDisplay.title}}</h2>
+    <h5>by user <a href="/users/{{postToDisplay.user.username}}">{{postToDisplay.user.username}}</a></h5>
+  <h3>{{postToDisplay.content}}</h3>
+</div>
+<div *ngFor="let comment of postToDisplay.comments">
+  <h3>Comment: {{comment.content}}</h3>
+  <h5>by user <a href="/users/{{comment.user.username}}"> {{comment.user.username}}</a></h5>
+  <h5>up {{comment.upvote}}</h5>
+  <h5>down {{comment.downvote}}</h5>
 </div>

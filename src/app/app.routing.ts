@@ -5,6 +5,7 @@ import { HotComponent } from './hot/hot.component';
 import { NewComponent } from './new/new.component';
 import { TopComponent } from './top/top.component';
 import { PostDetailComponent }   from './post-detail/post-detail.component';
+import { UserDetailComponent }   from './user-detail/user-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -26,6 +27,10 @@ const appRoutes: Routes = [
   {
     path: 'posts/:id',
     component: PostDetailComponent
+  },
+  {
+    path: 'users/:username',
+    component: UserDetailComponent
   }
  ];
 

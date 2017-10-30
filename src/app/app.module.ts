@@ -10,6 +10,7 @@ import { TopComponent } from './top/top.component';
 import { HomeComponent } from './home/home.component';
 import { SortPipe } from './sort.pipe';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
     TopComponent,
     HomeComponent,
     SortPipe,
-    PostDetailComponent
+    PostDetailComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,

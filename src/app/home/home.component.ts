@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../post.model';
+import { User } from '../user.model';
 import { Router } from '@angular/router';
 import { PostService } from '../post.service';
 
@@ -21,5 +22,9 @@ export class HomeComponent implements OnInit {
 
  goToDetailPage(clickedPost: Post) {
    this.router.navigate(['posts', clickedPost.id]);
+ };
+
+ goToUserPage(clickedUser: User) {
+   this.router.navigate(['users', clickedUser.username]);
  };
 }

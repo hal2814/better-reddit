@@ -1,9 +1,10 @@
 <h2>Posts</h2>
 
-<div *ngFor="let post of posts" (click)="goToDetailPage(post)" class="panel panel-default">
+<div *ngFor="let post of posts" (click)="goToDetailPage(post)" (click)="goToUserPage(user)" class="panel panel-default">
   <div class="panel-body">
-    <h3>User: {{post.user}}</h3>
-    <h4>Title: <a href="/posts/{{post.id}}">{{post.title}}</a></h4>
-    <h4>Content: {{post.content}}</h4>
+    <h2><a href="/posts/{{post.id}}">{{post.title}}</a></h2>
+    <h4>by user: <a href="/users/{{post.user.username}}">{{post.user.username}}</a></h4>
+    <h4>Up {{post.upvote}}</h4>
+    <h4>Down {{post.downvote}}</h4>
   </div>
 </div>
